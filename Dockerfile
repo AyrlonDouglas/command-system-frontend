@@ -2,7 +2,7 @@
 FROM node:20-alpine as builder
 # Copy the package.json and install dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 # Copy rest of the files
 COPY . .
 # Build the project
